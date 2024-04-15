@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1362.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guest.GuestController">
+   <children>
+      <AnchorPane layoutY="138.0" prefHeight="562.0" prefWidth="250.0" style="-fx-background-color: #bfea7c;">
+         <children>
+                        <Button fx:id="btnCheckIn" layoutX="17.0" layoutY="44.0" mnemonicParsing="false" onAction="#goTO_check_in" prefHeight="70.0" prefWidth="300.0" styleClass="btnCheck" stylesheets="@../style/project.css" text="Check In">
+                           <font>
+                              <Font name="Century Gothic Bold" size="26.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnCheckOut" layoutX="17.0" layoutY="126.0" mnemonicParsing="false" onAction="#goTO_check_out" prefHeight="70.0" prefWidth="300.0" styleClass="btnCheck" stylesheets="@../style/project.css" text="Check Out">
+                           <font>
+                              <Font name="Century Gothic Bold" size="26.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnGuest" layoutX="17.0" layoutY="296.0" mnemonicParsing="false" onAction="#guest" prefHeight="70.0" prefWidth="300.0" stylesheets="@../style/project.css" text="Guest">
+                           <font>
+                              <Font name="Century Gothic Bold" size="26.0" />
+                           </font>
+               <styleClass>
+                  <String fx:value="btnCheck" />
+                  <String fx:value="btnSelected" />
+               </styleClass>
+                        </Button>
+                        <Button fx:id="btnRooms" layoutX="17.0" layoutY="211.0" mnemonicParsing="false" onAction="#rooms" prefHeight="70.0" prefWidth="300.0" styleClass="btnCheck" stylesheets="@../style/project.css" text="Rooms">
+                           <font>
+                              <Font name="Century Gothic Bold" size="26.0" />
+                           </font>
+                        </Button>
+                        <Hyperlink fx:id="linkBack" alignment="CENTER" layoutX="65.0" layoutY="465.0" onAction="#back" prefHeight="43.0" prefWidth="104.0" styleClass="link" stylesheets="@../style/project.css" text="&lt; Back" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </Hyperlink>
+                        <Button fx:id="btnReport" layoutX="17.0" layoutY="379.0" mnemonicParsing="false" onAction="#report" prefHeight="70.0" prefWidth="300.0" styleClass="btnCheck" stylesheets="@../style/project.css" text="Report">
+                           <font>
+                              <Font name="Century Gothic Bold" size="26.0" />
+                           </font>
+                        </Button>
+                     </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="138.0" prefWidth="1362.0" style="-fx-background-color: #9bcf53;">
+         <children>
+
+
+
+            <Hyperlink fx:id="LogoutLink" layoutX="1164.0" layoutY="71.0" onAction="#logout" styleClass="link" stylesheets="@../style/project.css" text="Logout">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Hyperlink>
+            <Label layoutX="25.0" layoutY="82.0" prefHeight="49.0" prefWidth="174.0" text="HotelGuRu">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblUsername" layoutX="1165.0" layoutY="27.0" prefHeight="43.0" prefWidth="174.0" text="WaiPhoneAung">
+               <font>
+                  <Font name="Century Gothic Bold" size="16.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="1107.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/user.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="531.0" layoutY="75.0" prefHeight="63.0" prefWidth="304.0" stylesheets="@../style/project.css" text="Guest" textAlignment="CENTER">
+               <font>
+                  <Font name="Century Gothic Bold" size="62.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="lbltop" />
+                  <String fx:value="lbltop" />
+               </styleClass>
+            </Label>
+            <Button fx:id="btnLogo" layoutX="25.0" layoutY="19.0" mnemonicParsing="false" onAction="#goHome" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #9bcf53;" stylesheets="@project.css">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/biglogo1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="timeLabel" layoutX="1165.0" layoutY="18.0" prefHeight="18.0" prefWidth="154.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="250.0" layoutY="138.0" prefHeight="562.0" prefWidth="1112.0">
+         <children>
+            <TableView fx:id="tblGuest" layoutY="-1.0" prefHeight="562.0" prefWidth="1112.0">
+              <columns>
+                <TableColumn fx:id="guestID" prefWidth="86.0" text="GuestID" />
+                <TableColumn fx:id="roomID" prefWidth="84.0" text="Room" />
+                  <TableColumn fx:id="name" prefWidth="152.0" text="Name" />
+                  <TableColumn fx:id="nrc" prefWidth="113.0" text="NRC" />
+                  <TableColumn fx:id="phone" prefWidth="163.0" text="Phone" />
+                  <TableColumn fx:id="email" prefWidth="193.0" text="Email" />
+                  <TableColumn fx:id="address" prefWidth="210.0" text="Address" />
+                  <TableColumn fx:id="city" prefWidth="109.0" text="City" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

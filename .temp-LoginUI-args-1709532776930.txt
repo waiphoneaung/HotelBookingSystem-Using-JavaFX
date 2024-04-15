@@ -1,0 +1,13 @@
+--module-path
+"C:\\Data\\JAVAPROJECT\\openjfx-21.0.1_windows-x64_bin-sdk\\javafx-sdk-21.0.1\\lib"
+--add-modules
+javafx.controls,javafx.fxml
+-Dfile.encoding=UTF-8
+-Dstdout.encoding=UTF-8
+-Dstderr.encoding=UTF-8
+-p
+"C:\\Data\\JAVAPROJECT\\openjfx-21.0.1_windows-x64_bin-sdk\\javafx-sdk-21.0.1\\lib\\javafx.base.jar;C:\\Data\\JAVAPROJECT\\openjfx-21.0.1_windows-x64_bin-sdk\\javafx-sdk-21.0.1\\lib\\javafx.controls.jar;C:\\Data\\JAVAPROJECT\\openjfx-21.0.1_windows-x64_bin-sdk\\javafx-sdk-21.0.1\\lib\\javafx.fxml.jar;C:\\Data\\JAVAPROJECT\\openjfx-21.0.1_windows-x64_bin-sdk\\javafx-sdk-21.0.1\\lib\\javafx.graphics.jar;C:\\Data\\JAVAPROJECT\\openjfx-21.0.1_windows-x64_bin-sdk\\javafx-sdk-21.0.1\\lib\\javafx.media.jar;C:\\Data\\JAVAPROJECT\\openjfx-21.0.1_windows-x64_bin-sdk\\javafx-sdk-21.0.1\\lib\\javafx.swing.jar;C:\\Data\\JAVAPROJECT\\openjfx-21.0.1_windows-x64_bin-sdk\\javafx-sdk-21.0.1\\lib\\javafx.web.jar;C:\\Data\\JAVAPROJECT\\openjfx-21.0.1_windows-x64_bin-sdk\\javafx-sdk-21.0.1\\lib\\javafx-swt.jar;C:\\Data\\JAVAPROJECT\\mysql-connector-java-5.1.49.jar;C:\\Data\\JAVAPROJECT\\mysql-connector-java-5.1.49-bin.jar"
+-classpath
+"C:\\Data\\JAVAPROJECT\\HotelBookingSystem\\bin"
+-XX:+ShowCodeDetailsInExceptionMessages
+login.LoginUI

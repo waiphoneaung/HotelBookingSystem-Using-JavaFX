@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="968.0" prefWidth="1335.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutY="200.0" prefHeight="768.0" prefWidth="338.0" style="-fx-background-color: #bfea7c;" />
+      <AnchorPane layoutX="337.0" layoutY="200.0" prefHeight="754.0" prefWidth="1125.0" style="-fx-background-color: white;" />
+      <AnchorPane prefHeight="200.0" prefWidth="1335.0" style="-fx-background-color: #9bcf53;">
+         <children>
+            <Hyperlink layoutX="1047.0" layoutY="82.0" prefHeight="47.0" prefWidth="103.0" text="Log out">
+               <font>
+                  <Font name="Century Gothic Bold" size="23.0" />
+               </font>
+            </Hyperlink>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

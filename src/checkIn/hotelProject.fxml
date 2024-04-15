@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+
+<StackPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="checkIn.CheckInController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1362.0">
+         <children>
+            <AnchorPane layoutY="138.0" prefHeight="562.0" prefWidth="250.0" style="-fx-background-color: #bfea7c;">
+               <children>
+                  <Button fx:id="btnCheckIn" layoutX="17.0" layoutY="21.0" mnemonicParsing="false" onAction="#goTO_check_in" prefHeight="70.0" prefWidth="300.0" stylesheets="@project.css" text="Check In">
+                     <font>
+                        <Font name="Century Gothic Bold" size="26.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="btnCheck" />
+                        <String fx:value="btnSelected" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="btnCheckOut" layoutX="17.0" layoutY="93.0" mnemonicParsing="false" onAction="#goTO_check_out" prefHeight="70.0" prefWidth="300.0" styleClass="btnCheck" stylesheets="@project.css" text="Check Out">
+                     <font>
+                        <Font name="Century Gothic Bold" size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnRoomBooking" layoutX="17.0" layoutY="160.0" mnemonicParsing="false" onAction="#goTo_room_booking" prefHeight="70.0" prefWidth="300.0" styleClass="btnCheck" stylesheets="@project.css" text="Room Booking">
+                     <font>
+                        <Font name="Century Gothic Bold" size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnGuest" layoutX="17.0" layoutY="355.0" mnemonicParsing="false" onAction="#guest" prefHeight="70.0" prefWidth="300.0" styleClass="btnCheck" stylesheets="@project.css" text="Guest">
+                     <font>
+                        <Font name="Century Gothic Bold" size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnRooms" layoutX="17.0" layoutY="290.0" mnemonicParsing="false" onAction="#rooms" prefHeight="70.0" prefWidth="300.0" styleClass="btnCheck" stylesheets="@project.css" text="Rooms">
+                     <font>
+                        <Font name="Century Gothic Bold" size="26.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnCancelBooking" layoutX="17.0" layoutY="224.0" mnemonicParsing="false" onAction="#goTo_cancel_booking" prefHeight="70.0" prefWidth="300.0" styleClass="btnCheck" stylesheets="@project.css" text="Cancel Booking">
+                     <font>
+                        <Font name="Century Gothic Bold" size="26.0" />
+                     </font>
+                  </Button>
+                  <Hyperlink fx:id="linkBack" alignment="CENTER" layoutX="65.0" layoutY="482.0" onAction="#back" prefHeight="43.0" prefWidth="104.0" styleClass="link" stylesheets="@project.css" text="&lt; Back" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Hyperlink>
+                  <Button fx:id="btnReport" layoutX="17.0" layoutY="423.0" mnemonicParsing="false" onAction="#report" prefHeight="70.0" prefWidth="300.0" styleClass="btnCheck" stylesheets="@project.css" text="Report">
+                     <font>
+                        <Font name="Century Gothic Bold" size="26.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="250.0" layoutY="137.0" prefHeight="459.0" prefWidth="1113.0" style="-fx-background-color: blue; -fx-border-color: #fff67e;">
+               <children>
+                  <Pane prefHeight="457.0" prefWidth="468.0" style="-fx-background-color: #57cc99;">
+                     <children>
+                        <Label layoutX="28.0" layoutY="43.0" prefHeight="18.0" prefWidth="71.0" styleClass="Plbl" stylesheets="@project.css" text="Name" />
+                        <Label layoutX="28.0" layoutY="107.0" prefHeight="26.0" styleClass="Plbl" stylesheets="@project.css" text="Phone" />
+                        <Label layoutX="28.0" layoutY="165.0" styleClass="Plbl" stylesheets="@project.css" text="NRC" />
+                        <Label layoutX="28.0" layoutY="223.0" styleClass="Plbl" stylesheets="@project.css" text="Email" />
+                        <Label layoutX="28.0" layoutY="283.0" styleClass="Plbl" stylesheets="@project.css" text="Address" />
+                        <Label layoutX="28.0" layoutY="340.0" styleClass="Plbl" stylesheets="@project.css" text="City" />
+                        <TextField fx:id="NameField" layoutX="119.0" layoutY="43.0" onAction="#Handle_NameField" prefHeight="26.0" prefWidth="274.0" promptText="Enter Your Name" styleClass="Ptxf" stylesheets="@project.css" />
+                        <TextField fx:id="EmailField" layoutX="119.0" layoutY="222.0" onAction="#Handle_EmailField" prefHeight="26.0" prefWidth="274.0" promptText="name@mail.com" styleClass="Ptxf" stylesheets="@project.css" />
+                        <TextField fx:id="AddressField" layoutX="119.0" layoutY="282.0" prefHeight="26.0" prefWidth="274.0" promptText="Address" styleClass="Ptxf" stylesheets="@project.css" />
+                        <TextField fx:id="CityField" layoutX="119.0" layoutY="339.0" prefHeight="26.0" prefWidth="274.0" promptText="e.g: Yangon" styleClass="Ptxf" stylesheets="@project.css" />
+                        <TextField fx:id="PhoneField" layoutX="119.0" layoutY="107.0" onAction="#Handle_PhoneField" prefHeight="26.0" prefWidth="250.0" promptText="Phone Number" styleClass="Ptxf" stylesheets="@project.css" />
+                        <TextField fx:id="NrcField" layoutX="119.0" layoutY="165.0" prefHeight="26.0" prefWidth="250.0" promptText="12/MaYaKa(N)123456" styleClass="Ptxf" stylesheets="@project.css" />
+                        <Label fx:id="name_error" layoutX="119.0" layoutY="69.0" prefHeight="18.0" prefWidth="250.0" textFill="RED" />
+                        <Label fx:id="phone_error" layoutX="119.0" layoutY="133.0" prefHeight="18.0" prefWidth="250.0" textFill="RED" />
+                        <Label fx:id="nrc_error" layoutX="119.0" layoutY="190.0" prefHeight="18.0" prefWidth="250.0" textFill="RED" />
+                        <Label fx:id="email_error" layoutX="119.0" layoutY="248.0" prefHeight="18.0" prefWidth="250.0" textFill="RED" />
+                        <Label fx:id="address_error" layoutX="119.0" layoutY="308.0" prefHeight="18.0" prefWidth="250.0" textFill="RED" />
+                        <Label fx:id="city_error" layoutX="119.0" layoutY="365.0" prefHeight="18.0" prefWidth="250.0" textFill="RED" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="468.0" prefHeight="298.0" prefWidth="643.0" style="-fx-background-color: #c7f9cc;">
+                     <children>
+                        <Label layoutX="232.0" prefHeight="49.0" prefWidth="261.0" text="Room Data" />
+                        <Label layoutX="94.0" layoutY="63.0" prefHeight="18.0" prefWidth="87.0" text="Room Number" />
+                        <Label layoutX="95.0" layoutY="133.0" text="Room Capacity" />
+                        <Label layoutX="96.0" layoutY="165.0" text="Check In Date" />
+                        <Label layoutX="95.0" layoutY="201.0" text="Check Out Date" />
+                        <Label layoutX="95.0" layoutY="98.0" prefHeight="18.0" prefWidth="104.0" text="Room Type" />
+                        <Label layoutX="94.0" layoutY="240.0" text="Number of Day" />
+                        <DatePicker fx:id="CheckInDatePicker" layoutX="244.0" layoutY="164.0" prefHeight="26.0" prefWidth="154.0" />
+                        <DatePicker fx:id="CheckOutDatePicker" layoutX="245.0" layoutY="201.0" prefHeight="26.0" prefWidth="154.0" />
+                        <TextField fx:id="RoomNumber" layoutX="244.0" layoutY="59.0" prefHeight="26.0" prefWidth="154.0" />
+                        <TextField fx:id="NumberOfDay" layoutX="246.0" layoutY="239.0" prefHeight="26.0" prefWidth="154.0" />
+                        <RadioButton fx:id="economyType" layoutX="244.0" layoutY="98.0" mnemonicParsing="false" text="ECONOMY" />
+                        <RadioButton fx:id="NormalType" layoutX="331.0" layoutY="98.0" mnemonicParsing="false" text="NORMAL" />
+                        <RadioButton fx:id="VipType" layoutX="408.0" layoutY="98.0" mnemonicParsing="false" text="VIP" />
+                        <RadioButton fx:id="SingleCapacity" layoutX="244.0" layoutY="133.0" mnemonicParsing="false" text="Single" />
+                        <RadioButton fx:id="DoubleCapacity" layoutX="331.0" layoutY="133.0" mnemonicParsing="false" text="Double" />
+                        <RadioButton fx:id="TripleCapacity" layoutX="407.0" layoutY="133.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="69.0" text="Triple" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="468.0" layoutY="298.0" prefHeight="159.0" prefWidth="643.0" style="-fx-background-color: khaki;">
+                     <children>
+                        <Label layoutX="318.0" layoutY="14.0" prefHeight="18.0" prefWidth="116.0" text="Payment" />
+                        <Label layoutX="56.0" layoutY="53.0" prefHeight="18.0" prefWidth="70.0" text="Price" />
+                        <Label layoutX="389.0" layoutY="53.0" prefHeight="18.0" prefWidth="70.0" text="Total" />
+                        <Label layoutX="56.0" layoutY="86.0" prefHeight="18.0" prefWidth="116.0" text="Payment Status" />
+                        <Button fx:id="FindBtn" layoutX="444.0" layoutY="104.0" mnemonicParsing="false" onAction="#FindAction" prefHeight="40.0" prefWidth="160.0" text="FIND" />
+                        <TextField fx:id="PriceField" layoutX="148.0" layoutY="49.0" prefHeight="26.0" prefWidth="154.0" />
+                        <TextField fx:id="PaymentField" layoutX="148.0" layoutY="82.0" prefHeight="26.0" prefWidth="154.0" />
+                        <TextField fx:id="TotalField" layoutX="447.0" layoutY="49.0" prefHeight="26.0" prefWidth="154.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="138.0" prefWidth="1362.0" style="-fx-background-color: #9bcf53;">
+               <children>
+      
+      
+      
+                  <Hyperlink fx:id="LogoutLink" layoutX="1164.0" layoutY="71.0" onAction="#logout" styleClass="link" stylesheets="@project.css" text="Logout">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Hyperlink>
+                  <Label layoutX="25.0" layoutY="82.0" prefHeight="49.0" prefWidth="174.0" text="HotelGuRu">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblUsername" layoutX="1165.0" layoutY="27.0" prefHeight="43.0" prefWidth="174.0" text="WaiPhoneAung">
+                     <font>
+                        <Font name="Century Gothic Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="1107.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/user.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="531.0" layoutY="75.0" prefHeight="63.0" prefWidth="304.0" stylesheets="@project.css" text="Check In" textAlignment="CENTER">
+                     <font>
+                        <Font name="Century Gothic Bold" size="62.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="lbltop" />
+                        <String fx:value="lbltop" />
+                     </styleClass>
+                  </Label>
+                  <Button fx:id="btnLogo" layoutX="25.0" layoutY="19.0" mnemonicParsing="false" onAction="#goHome" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #9bcf53;" stylesheets="@project.css">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/biglogo1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label fx:id="timeLabel" layoutX="1165.0" layoutY="18.0" prefHeight="18.0" prefWidth="154.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

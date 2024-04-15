@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LoginController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0">
+         <children>
+            <AnchorPane layoutX="313.0" prefHeight="500.0" prefWidth="387.0" style="-fx-background-color: #bfea7c;">
+               <children>
+                  <Label layoutX="109.0" layoutY="98.0" prefHeight="47.0" prefWidth="170.0" text="Sign in" textFill="#570f47f8">
+                     <font>
+                        <Font name="CooperBlackStd" size="29.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="199.0" text="Username" textFill="#416d19">
+                     <font>
+                        <Font name="Century Gothic Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="272.0" prefHeight="21.0" prefWidth="83.0" text="Password" textFill="#416d19">
+                     <font>
+                        <Font name="Century Gothic Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txfUsername" layoutX="118.0" layoutY="190.0" prefHeight="40.0" prefWidth="248.0" promptText="username" />
+                  <PasswordField fx:id="txfPassword" layoutX="118.0" layoutY="263.0" prefHeight="40.0" prefWidth="248.0" promptText="password" />
+                  <Button fx:id="btnLogin" layoutX="142.0" layoutY="334.0" mnemonicParsing="false" onAction="#LoginAction" prefHeight="47.0" prefWidth="136.0" style="-fx-background-color: #416d19;" styleClass="btnCheck" stylesheets="@../style/project.css" text="Log in" textFill="#fff67e">
+                     <font>
+                        <Font name="Gill Sans MT Bold" size="19.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="500.0" prefWidth="313.0" style="-fx-background-color: #9bcf53;">
+               <children>
+                  <ImageView fitHeight="142.0" fitWidth="149.0" layoutX="95.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/biglogo1.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="32.0" layoutY="223.0" prefHeight="47.0" prefWidth="276.0" text="HotelGuRu" textFill="#1a0e83">
+                     <font>
+                        <Font name="Century Gothic Bold" size="42.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="86.0" layoutY="277.0" prefHeight="33.0" prefWidth="170.0" text="Hotel &amp; Resort" textFill="#416d19">
+                     <font>
+                        <Font name="Palatino Linotype Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
