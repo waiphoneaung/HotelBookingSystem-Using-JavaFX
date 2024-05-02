@@ -39,11 +39,6 @@
                               <Font name="Century Gothic Bold" size="26.0" />
                            </font>
                         </Button>
-                        <Hyperlink fx:id="linkBack" alignment="CENTER" layoutX="65.0" layoutY="465.0" onAction="#back" prefHeight="43.0" prefWidth="104.0" styleClass="link" stylesheets="@../style/project.css" text="&lt; Back" textAlignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="23.0" />
-                           </font>
-                        </Hyperlink>
                         <Button fx:id="btnReport" layoutX="17.0" layoutY="379.0" mnemonicParsing="false" onAction="#report" prefHeight="70.0" prefWidth="300.0" styleClass="btnCheck" stylesheets="@../style/project.css" text="Report">
                            <font>
                               <Font name="Century Gothic Bold" size="26.0" />
@@ -71,9 +66,9 @@
                   <Font name="Century Gothic Bold" size="16.0" />
                </font>
             </Label>
-            <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="1107.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="1107.0" layoutY="35.0" onMouseClicked="#btnAddStaff" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../img/user.png" />
+                  <Image url="@../img/AddUser.png" />
                </image>
             </ImageView>
             <Label alignment="CENTER" layoutX="531.0" layoutY="75.0" prefHeight="63.0" prefWidth="304.0" stylesheets="@../style/project.css" text="Guest" textAlignment="CENTER">
@@ -103,11 +98,11 @@
               <columns>
                 <TableColumn fx:id="guestID" prefWidth="86.0" text="GuestID" />
                 <TableColumn fx:id="roomID" prefWidth="84.0" text="Room" />
-                  <TableColumn fx:id="name" prefWidth="152.0" text="Name" />
-                  <TableColumn fx:id="nrc" prefWidth="113.0" text="NRC" />
-                  <TableColumn fx:id="phone" prefWidth="163.0" text="Phone" />
-                  <TableColumn fx:id="email" prefWidth="193.0" text="Email" />
-                  <TableColumn fx:id="address" prefWidth="210.0" text="Address" />
+                  <TableColumn fx:id="name" prefWidth="139.0" text="Name" />
+                  <TableColumn fx:id="nrc" prefWidth="157.0" text="NRC" />
+                  <TableColumn fx:id="phone" prefWidth="167.0" text="Phone" />
+                  <TableColumn fx:id="email" prefWidth="179.0" text="Email" />
+                  <TableColumn fx:id="address" prefWidth="189.0" text="Address" />
                   <TableColumn fx:id="city" prefWidth="109.0" text="City" />
               </columns>
             </TableView>

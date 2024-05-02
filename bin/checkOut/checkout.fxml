@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1362.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="checkOut.CheckoutController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1362.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="checkOut.CheckOutController">
    <children>
       <AnchorPane layoutY="138.0" prefHeight="562.0" prefWidth="250.0" style="-fx-background-color: #bfea7c;">
 		<children>
@@ -41,11 +41,6 @@
                               <Font name="Century Gothic Bold" size="26.0" />
                            </font>
                         </Button>
-                        <Hyperlink fx:id="linkBack" alignment="CENTER" layoutX="65.0" layoutY="465.0" onAction="#back" prefHeight="43.0" prefWidth="104.0" styleClass="link" stylesheets="@../style/project.css" text="&lt; Back" textAlignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="23.0" />
-                           </font>
-                        </Hyperlink>
                         <Button fx:id="btnReport" layoutX="17.0" layoutY="379.0" mnemonicParsing="false" onAction="#report" prefHeight="70.0" prefWidth="300.0" styleClass="btnCheck" stylesheets="@../style/project.css" text="Report">
                            <font>
                               <Font name="Century Gothic Bold" size="26.0" />
@@ -73,9 +68,9 @@
                   <Font name="Century Gothic Bold" size="16.0" />
                </font>
             </Label>
-            <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="1107.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="1107.0" layoutY="35.0" onMouseClicked="#btnAddStaff" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../img/user.png" />
+                  <Image url="@../img/AddUser.png" />
                </image>
             </ImageView>
             <Label alignment="CENTER" layoutX="531.0" layoutY="75.0" prefHeight="63.0" prefWidth="304.0" stylesheets="@../style/project.css" text="Check Out" textAlignment="CENTER">
@@ -99,11 +94,11 @@
             <Label fx:id="timeLabel" layoutX="1165.0" layoutY="18.0" prefHeight="18.0" prefWidth="154.0" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="247.0" layoutY="137.0" prefHeight="570.0" prefWidth="1115.0" style="-fx-background-color: gray;">
+      <AnchorPane layoutX="247.0" layoutY="137.0" prefHeight="570.0" prefWidth="1115.0" style="-fx-background-color: #99e0df;">
          <children>
-            <AnchorPane layoutX="60.0" layoutY="100.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="271.0" prefWidth="362.0" style="-fx-background-color: #bfea7c; -fx-border-color: #9bcf53; -fx-border-width: 4;">
+            <AnchorPane layoutX="35.0" layoutY="114.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="271.0" prefWidth="362.0" style="-fx-background-color: #bfea7c; -fx-border-color: #9bcf53; -fx-border-width: 4;">
                <children>
-                  <Button fx:id="checkOut" layoutX="211.0" layoutY="198.0" mnemonicParsing="false" onAction="#ActionCheckOut" prefHeight="43.0" prefWidth="117.0" style="-fx-background-color: silver;" styleClass="btnsubmit" stylesheets="@../style/project.css" text="Check Out">
+                  <Button fx:id="checkOut" layoutX="211.0" layoutY="198.0" mnemonicParsing="false" onAction="#ActionCheckOut" prefHeight="43.0" prefWidth="117.0" styleClass="btnsubmit" stylesheets="@../style/project.css" text="Check Out">
                      <font>
                         <Font name="Century Gothic Bold" size="14.0" />
                      </font>
@@ -114,7 +109,7 @@
                         <Font name="Century Gothic Bold" size="15.0" />
                      </font>
                   </Label>
-                  <Button fx:id="cancelCheckOut" layoutX="108.0" layoutY="198.0" mnemonicParsing="false" onAction="#ActionCancelCheckOut" prefHeight="43.0" prefWidth="86.0" style="-fx-background-color: black;" styleClass="btncancel" stylesheets="@../style/project.css" text="Cancel" textFill="#eeebeb">
+                  <Button fx:id="cancelCheckOut" layoutX="108.0" layoutY="198.0" mnemonicParsing="false" onAction="#ActionCancelCheckOut" prefHeight="43.0" prefWidth="86.0" styleClass="btncancel" stylesheets="@../style/project.css" text="Cancel">
                      <font>
                         <Font name="Century Gothic Bold" size="14.0" />
                      </font>
@@ -128,7 +123,7 @@
                   <TableColumn fx:id="co3" prefWidth="98.0" text="Name" />
                   <TableColumn fx:id="co4" prefWidth="98.0" text="NRC" />
                   <TableColumn fx:id="co5" prefWidth="98.0" text="Check In Date" />
-                  <TableColumn fx:id="co6" prefWidth="98.0" text="Check Ot Date" />
+                  <TableColumn fx:id="co6" prefWidth="98.0" text="Check Out Date" />
                   <TableColumn fx:id="co7" prefWidth="98.0" text="Price" />
               </columns>
             </TableView>

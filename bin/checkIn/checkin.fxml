@@ -33,7 +33,7 @@
                         <String fx:value="btnSelected" />
                      </styleClass>
                   </Button>
-                  <Button fx:id="btnCheckOut" layoutX="17.0" layoutY="126.0" mnemonicParsing="false" onAction="#goTO_check_out" prefHeight="70.0" prefWidth="300.0" styleClass="btnCheck" stylesheets="@../style/project.css" text="Check Out">
+                  <Button fx:id="btnCheckOut" layoutX="17.0" layoutY="126.0" mnemonicParsing="false" onAction="#goTO_check_out" prefHeight="70.0" prefWidth="300.0" styleClass="btnCheck" stylesheets="@../style/project.css" text="Check Out" textFill="#3deb07bd">
                      <font>
                         <Font name="Century Gothic Bold" size="26.0" />
                      </font>
@@ -92,7 +92,7 @@
                            <font>
                               <Font name="System Bold" size="15.0" />
                            </font></Label>
-                        <TextField fx:id="NameField" layoutX="119.0" layoutY="43.0" onKeyReleased="#Handle_NameField" prefHeight="26.0" prefWidth="250.0" promptText="Enter Your Name" styleClass="Ptxf" stylesheets="@../HotelProject/checkIn/project.css" />
+                        <TextField fx:id="NameField" layoutX="119.0" layoutY="43.0" onKeyReleased="#Handle_NameField" onTouchMoved="#Handle_NameField" prefHeight="26.0" prefWidth="250.0" promptText="Enter Your Name" styleClass="Ptxf" stylesheets="@../HotelProject/checkIn/project.css" />
                         <TextField fx:id="PhoneField" layoutX="119.0" layoutY="107.0" onKeyReleased="#Handle_PhoneField" onTouchMoved="#Handle_PhoneField" prefHeight="26.0" prefWidth="250.0" promptText="Phone Number" styleClass="Ptxf" stylesheets="@../HotelProject/checkIn/project.css" />
                         <TextField fx:id="NrcField" layoutX="119.0" layoutY="165.0" prefHeight="26.0" prefWidth="250.0" promptText="12/MaYaKa(N)123456" styleClass="Ptxf" stylesheets="@../HotelProject/checkIn/project.css" />
                         <TextField fx:id="EmailField" layoutX="119.0" layoutY="222.0" onKeyReleased="#Handle_EmailField" onTouchMoved="#Handle_EmailField" prefHeight="26.0" prefWidth="250.0" promptText="name@mail.com" styleClass="Ptxf" stylesheets="@../HotelProject/checkIn/project.css" />
@@ -244,14 +244,14 @@
                         <Font name="System Bold" size="29.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lblUsername" layoutX="1165.0" layoutY="27.0" prefHeight="43.0" prefWidth="174.0" text="WaiPhoneAung">
+                  <Label fx:id="lblUsername" layoutX="1165.0" layoutY="27.0" prefHeight="43.0" prefWidth="174.0">
                      <font>
                         <Font name="Century Gothic Bold" size="16.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="1107.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imgAddStaff" fitHeight="58.0" fitWidth="58.0" layoutX="1107.0" layoutY="35.0" onMouseClicked="#btnAddStaff" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../img/user.png" />
+                        <Image url="@../img/AddUser.png" />
                      </image>
                   </ImageView>
                   <Label alignment="CENTER" layoutX="531.0" layoutY="75.0" prefHeight="63.0" prefWidth="304.0" stylesheets="@../style/project.css" text="Check In" textAlignment="CENTER">

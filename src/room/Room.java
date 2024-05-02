@@ -5,14 +5,12 @@ public class Room {
 	private int RoomID;
 	private String RoomType;
 	private String RoomCapacity;
-	private boolean Is_Empty;
 	private double PricePerNight;
-	public Room(int roomID, String roomType, String roomCapacity, boolean is_Empty, double pricePerNight) {
+	public Room(int roomID, String roomType, String roomCapacity, double pricePerNight) {
 		super();
 		RoomID = roomID;
 		RoomType = roomType;
 		RoomCapacity = roomCapacity;
-		Is_Empty = is_Empty;
 		PricePerNight = pricePerNight;
 	}
 	public int getRoomID() {
@@ -33,12 +31,6 @@ public class Room {
 	public void setRoomCapacity(String roomCapacity) {
 		RoomCapacity = roomCapacity;
 	}
-	public boolean isIs_Empty() {
-		return Is_Empty;
-	}
-	public void setIs_Empty(boolean is_Empty) {
-		Is_Empty = is_Empty;
-	}
 	public double getPricePerNight() {
 		return PricePerNight;
 	}
@@ -47,8 +39,8 @@ public class Room {
 	}
 	@Override
 	public String toString() {
-		return "Room [RoomID=" + RoomID + ", RoomType=" + RoomType + ", RoomCapacity=" + RoomCapacity + ", Is_Empty="
-				+ Is_Empty + ", PricePerNight=" + PricePerNight + "]";
+		return "Room [RoomID=" + RoomID + ", RoomType=" + RoomType + ", RoomCapacity=" + RoomCapacity
+				+ ", PricePerNight=" + PricePerNight + "]";
 	}
 	
 }

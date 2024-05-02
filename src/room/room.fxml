@@ -39,11 +39,6 @@
                   <String fx:value="btnSelected" />
                </styleClass>
                         </Button>
-                        <Hyperlink fx:id="linkBack" alignment="CENTER" layoutX="65.0" layoutY="465.0" onAction="#back" prefHeight="43.0" prefWidth="104.0" styleClass="link" stylesheets="@../style/project.css" text="&lt; Back" textAlignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="23.0" />
-                           </font>
-                        </Hyperlink>
                         <Button fx:id="btnReport" layoutX="17.0" layoutY="379.0" mnemonicParsing="false" onAction="#report" prefHeight="70.0" prefWidth="300.0" styleClass="btnCheck" stylesheets="@../style/project.css" text="Report">
                            <font>
                               <Font name="Century Gothic Bold" size="26.0" />
@@ -55,11 +50,10 @@
          <children>
             <TableView fx:id="tblRoom" layoutX="-14.0" prefHeight="562.0" prefWidth="1111.0">
               <columns>
-                <TableColumn fx:id="c1" prefWidth="104.0" text="RoomID" />
-                <TableColumn fx:id="c2" prefWidth="319.0" text="Room Type" />
+                <TableColumn fx:id="c1" prefWidth="124.0" text="RoomID" />
+                <TableColumn fx:id="c2" prefWidth="299.0" text="Room Type" />
                   <TableColumn fx:id="c3" minWidth="9.0" prefWidth="269.0" text="Room Capacity" />
-                  <TableColumn fx:id="c4" minWidth="0.0" prefWidth="193.0" text="is_Empty" />
-                  <TableColumn fx:id="c5" prefWidth="225.0" text="Price Per Night" />
+                  <TableColumn fx:id="c4" prefWidth="225.0" text="Price Per Night" />
               </columns>
             </TableView>
          </children></AnchorPane>
@@ -83,9 +77,9 @@
                   <Font name="Century Gothic Bold" size="16.0" />
                </font>
             </Label>
-            <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="1107.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="1107.0" layoutY="35.0" onMouseClicked="#btnAddStaff" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../img/user.png" />
+                  <Image url="@../img/AddUser.png" />
                </image>
             </ImageView>
             <Label alignment="CENTER" layoutX="531.0" layoutY="75.0" prefHeight="63.0" prefWidth="304.0" stylesheets="@../style/project.css" text="ROOMS" textAlignment="CENTER">

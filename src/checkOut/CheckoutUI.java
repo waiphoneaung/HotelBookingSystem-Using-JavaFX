@@ -17,14 +17,12 @@ public class CheckoutUI extends Application {
 		Parent root = FXMLLoader.load(getClass().getResource("checkout.fxml"));
 		LoginUI. mainStage = st;
 		Scene sc = new Scene(root);
-		sc.getStylesheets().add("/style/project.css");
+		//sc.getStylesheets().add("/style/project.css");
 		st.setScene(sc);
 		st.getIcons().add(new Image(getClass().getResourceAsStream("../img/biglogo1.png")));
 		st.setTitle("Check Out");
-		st.setResizable(false);
-		st.setMaximized(true);
+		st.setResizable(true);
+		//st.setMaximized(true);
 		st.show();
-		
 	}
-
 }

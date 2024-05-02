@@ -2,18 +2,22 @@
 
 <?import java.lang.String?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1362.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="report.ReportController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1362.0" style="-fx-background-color: khaki;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="report.ReportController">
    <children>
-      <AnchorPane layoutY="138.0" prefHeight="562.0" prefWidth="250.0" style="-fx-background-color: #bfea7c;">
+      <AnchorPane layoutY="138.0" prefHeight="562.0" prefWidth="230.0" style="-fx-background-color: #bfea7c;">
          <children>
                         <Button fx:id="btnCheckIn" layoutX="17.0" layoutY="44.0" mnemonicParsing="false" onAction="#goTO_check_in" prefHeight="70.0" prefWidth="300.0" styleClass="btnCheck" stylesheets="@../style/project.css" text="Check In">
                            <font>
@@ -35,11 +39,6 @@
                               <Font name="Century Gothic Bold" size="26.0" />
                            </font>
                         </Button>
-                        <Hyperlink fx:id="linkBack" alignment="CENTER" layoutX="65.0" layoutY="465.0" onAction="#back" prefHeight="43.0" prefWidth="104.0" styleClass="link" stylesheets="@../style/project.css" text="&lt; Back" textAlignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="23.0" />
-                           </font>
-                        </Hyperlink>
                         <Button fx:id="btnReport" layoutX="17.0" layoutY="379.0" mnemonicParsing="false" onAction="#report" prefHeight="70.0" prefWidth="300.0" stylesheets="@../style/project.css" text="Report">
                            <font>
                               <Font name="Century Gothic Bold" size="26.0" />
@@ -71,9 +70,9 @@
                   <Font name="Century Gothic Bold" size="16.0" />
                </font>
             </Label>
-            <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="1107.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="1107.0" layoutY="35.0" onMouseClicked="#btnAddStaff" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../img/user.png" />
+                  <Image url="@../img/AddUser.png" />
                </image>
             </ImageView>
             <Label alignment="CENTER" layoutX="531.0" layoutY="75.0" prefHeight="63.0" prefWidth="304.0" stylesheets="@../style/project.css" text="Report" textAlignment="CENTER">
@@ -97,16 +96,95 @@
             <Label fx:id="timeLabel" layoutX="1165.0" layoutY="18.0" prefHeight="18.0" prefWidth="154.0" />
          </children>
       </AnchorPane>
-      <TableView layoutX="251.0" layoutY="135.0" prefHeight="503.0" prefWidth="1112.0">
+      <TableView fx:id="tblReport" layoutX="237.0" layoutY="211.0" prefHeight="377.0" prefWidth="1120.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="colBookineID" prefWidth="69.31680297851562" text="Booking ID" />
+          <TableColumn fx:id="colRoomID" prefWidth="58.396026611328125" text="Room ID" />
+            <TableColumn fx:id="colGuestID" prefWidth="59.792022705078125" text="Guest ID" />
+            <TableColumn fx:id="colName" prefWidth="91.20803833007812" text="Name" />
+            <TableColumn fx:id="colNRC" prefWidth="104.0" text="NRC" />
+            <TableColumn fx:id="colPhone" prefWidth="130.37603759765625" text="Phone" />
+            <TableColumn fx:id="colCity" prefWidth="83.62396240234375" text="City" />
+            <TableColumn fx:id="colCKin" prefWidth="98.2279052734375" text="Checkin Date" />
+            <TableColumn fx:id="colCKout" prefWidth="97.0" text="Checkout Date" />
+            <TableColumn fx:id="colRoomType" prefWidth="75.0" text="RoomTypes" />
+            <TableColumn fx:id="colRoomCapacity" prefWidth="99.0" text="RoomCapacity" />
+            <TableColumn fx:id="colNumberOfDay" minWidth="0.0" prefWidth="66.0" text="Stayed Day" />
+            <TableColumn fx:id="colTotalPrice" prefWidth="79.0" text="Total Price" />
         </columns>
       </TableView>
-      <AnchorPane layoutX="251.0" layoutY="637.0" prefHeight="63.0" prefWidth="1112.0" style="-fx-background-color: khaki;">
-         <children>
-            <Button layoutX="979.0" layoutY="11.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="85.0" styleClass="btnsubmit" stylesheets="@../style/project.css" text="Report" />
-         </children>
-      </AnchorPane>
+      <Label layoutX="371.0" layoutY="150.0" text="Start Date  ">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="598.0" layoutY="150.0" text="End Date">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dpStartDate" layoutX="310.0" layoutY="169.0" onAction="#dpStartDate" />
+      <DatePicker fx:id="dpEndDate" layoutX="538.0" layoutY="169.0" onAction="#dpEndDate" />
+      <Label layoutX="804.0" layoutY="150.0" text="Room Type">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="993.0" layoutY="150.0" text="Room Capacity">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="exportReport" layoutX="1222.0" layoutY="629.0" mnemonicParsing="false" onAction="#exportReportAction" prefHeight="40.0" prefWidth="113.0" styleClass="btnsubmit" stylesheets="@../style/project.css" text="Export Report">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="1102.0" layoutY="603.0" text="Total Income">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txfTotalIncome" layoutX="1054.0" layoutY="637.0" prefHeight="26.0" prefWidth="124.0" />
+      <Label layoutX="911.0" layoutY="603.0" text="Economy Room">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txfEroom" layoutX="890.0" layoutY="637.0" prefHeight="26.0" prefWidth="132.0" />
+      <Label layoutX="705.0" layoutY="603.0" text="Normal Room">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txfNroom" layoutX="674.0" layoutY="637.0" prefHeight="26.0" prefWidth="142.0" />
+      <Label layoutX="524.0" layoutY="603.0" text="VIP Room">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txfVIProom" layoutX="491.0" layoutY="637.0" prefHeight="26.0" prefWidth="132.0" />
+      <Label layoutX="308.0" layoutY="603.0" text="Number of Booking">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txfNumberOfBook" layoutX="298.0" layoutY="637.0" />
+      <MenuButton fx:id="mbRoomType" layoutX="784.0" layoutY="168.0" mnemonicParsing="false" onMouseClicked="#mbRoomTypeAction" styleClass="btnsubmit" stylesheets="@../style/project.css" text="MenuButton">
+        <items>
+            <MenuItem fx:id="allType" mnemonicParsing="false" onAction="#allType" text="All" />
+            <MenuItem fx:id="m1" mnemonicParsing="false" onAction="#m1" text=" ECONOMY" />
+            <MenuItem fx:id="m2" mnemonicParsing="false" onAction="#m2" text="NORMAL" />
+            <MenuItem fx:id="m3" mnemonicParsing="false" onAction="#m3" text="VIP" />
+        </items>
+      </MenuButton>
+      <MenuButton fx:id="mbRoomCapacity" layoutX="987.0" layoutY="168.0" mnemonicParsing="false" onMouseClicked="#mbRoomCapacityAction" styleClass="btnsubmit" stylesheets="@../style/project.css" text="MenuButton">
+         <items>
+            <MenuItem fx:id="allCapacity" mnemonicParsing="false" onAction="#allCapacityAction" text="All" />
+            <MenuItem fx:id="m4" mnemonicParsing="false" onAction="#m4" text="Single" />
+            <MenuItem fx:id="m5" mnemonicParsing="false" onAction="#m5" text="Double" />
+            <MenuItem fx:id="m6" mnemonicParsing="false" onAction="#m6" text="Triple" />
+         </items>
+      </MenuButton>
    </children>
 </AnchorPane>
