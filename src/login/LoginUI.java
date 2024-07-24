@@ -1,5 +1,6 @@
 package login;
 
+import checkIn.CheckInController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -24,6 +25,9 @@ public class LoginUI extends Application{
 		st.setResizable(false);
 		st.setTitle("Login");
 		st.show();
+		
+	    CheckInController.setLoginUI(this);
+
 	}
 
 }

@@ -24,7 +24,7 @@ public class GuestUI extends Application {
 		st.getIcons().add(new Image(getClass().getResourceAsStream("../img/biglogo1.png")));
 		st.setTitle("Guest");
 		st.setResizable(false);
-		st.setMaximized(true);
+		//st.setMaximized(true);
 		st.show();
 		
 	}

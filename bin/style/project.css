@@ -1,9 +1,9 @@
-.btnCheck{
+/* .btnCheck{
 	
 	-fx-background-color:#416d19;
 	
 	/*-fx-border-color:#bfb439;*/
-	/*-fx-border-radius:20 20 20 20;*/
+	/*-fx-border-radius:20 20 20 20;
 	-fx-border-width:5px;
 	-fx-text-fill:white;
 	
@@ -88,7 +88,7 @@
    
 }
 
-/* .btnsubmit{
+.btnsubmit{
 	-fx-background-color:silver;
 	 -fx-font-family: "Century Gothic";
     -fx-font-weight: bold;
@@ -100,33 +100,129 @@
 	 -fx-font-family: "Century Gothic";
     -fx-font-weight: bold;
 }
-*/
+
 .label{
 	 -fx-font-family: "Century Gothic";
     -fx-font-weight: bold;
 }
 
-.btnsubmit {
-    -fx-display: inline-block;
-    -fx-padding: 0px 12px;
-    -fx-border-radius: 4px;
-    -fx-text-fill: rgb(61, 79, 88);
-    -fx-background-color: rgb(249, 251, 250);
-    -fx-border-color: rgb(137, 151, 155);
-    -fx-border-width: 1px;
-    -fx-box-shadow: rgba(6, 22, 33, 0.3) 0px 1px 2px;
-    -fx-font-size: 14px;
-    -fx-font-weight: 400;
-    -fx-height: 36px;
-    -fx-cursor: hand;
-    -fx-transition-property: text-fill, background-color, border-color, box-shadow;
-    -fx-transition-duration: 150ms;
+*/
+
+/* Button Styles */
+.btnCheck, .btnSelected {
+    -fx-background-color: #4CAF50; /* Green */
+    -fx-border-width: 0;
+    -fx-text-fill: white;
+    -fx-min-width: 200px;
+    -fx-max-width: 200px;
+    -fx-min-height: 40px;
+    -fx-max-height: 40px;
+    -fx-font-size: 16px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.5) , 10,0,0,1 );
 }
 
-.btnsubmit:hover {
-    -fx-text-fill: rgb(61, 79, 88);
-    -fx-background-color: rgb(255, 111, 255);
-    -fx-border-color: rgb(93, 108, 116);
-    -fx-box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 4px, rgb(231, 238, 236) 0px 0px 0px 3px;
+.btnCheck:hover {
+    -fx-background-color: #45a049; /* Darker Green */
+}
+
+.btnSelected {
+    -fx-background-color: #070EE2; /* Blue */
+    -fx-text-fill:white ;
+}
+
+.lbltop {
+    -fx-background-color: #4CAF50; /* Green */
+    -fx-background-radius: 19;
+    -fx-font-size: 24px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 10px;
+}
+
+.link {
+    -fx-text-fill: blue; /* Blue */
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+}
+
+/* Form Element Styles */
+.Plbl {
+    -fx-text-alignment: left;
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-pref-width: 70px;
+    -fx-pref-height: 25px;
+}
+
+.Ptxf {
+    -fx-pref-width: 250px;
+    -fx-pref-height: 25px;
+    -fx-background-color: #f2f2f2; /* Light Gray */
+    -fx-border-width: 1px;
+    -fx-border-color: #ccc; /* Light Gray */
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}
+
+.btncancel {
+    -fx-background-color: #FF6347; /* Tomato */
+    -fx-text-fill: white; /* White text */
+    -fx-font-family: "Century Gothic";
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 0);
+}
+
+.btnsearch {
+    -fx-background-color: #4682B4; /* Steel Blue */
+    -fx-text-fill: white; /* White text */
+    -fx-font-family: "Century Gothic";
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 0); /* Subtle drop shadow effect */
+}
+
+
+.btnsubmit {
+    -fx-background-color: #20B2AA; /* Light Sea Green */
+    -fx-text-fill: white; /* White text */
+    -fx-font-family: "Century Gothic";
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 0);
+}
+
+
+
+/* Button Hover Effects with Transitions */
+.btncancel:hover {
+    -fx-background-color: #f44336; /* Red */
+    -fx-text-fill: white; /* White text color */
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px; /* Rounded corners */
+    -fx-border-color: #f44336; /* Border color */
+    -fx-border-width: 2px; /* Border width */
+    -fx-border-radius: 5px; /* Rounded corners for border */
+    -fx-transition: background-color 0.3s, border-color 0.3s; /* Transition effect for background color and border color */
+}
+
+.btnsearch:hover, .btnsubmit:hover {
+    -fx-background-color: #2196F3; /* Blue */
+    -fx-text-fill: white; 
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px; 
+    -fx-border-color: #2196F3; 
+    -fx-border-width: 2px; 
+    -fx-border-radius: 5px; 
+    -fx-transition: background-color 0.3s, border-color 0.3s; 
+}
+
+
+/* General Label Styles */
+.label {
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
 }
 

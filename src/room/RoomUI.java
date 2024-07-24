@@ -23,7 +23,7 @@ public class RoomUI extends Application{
 		st.setScene(sc);
 		st.setTitle("Room");
 		st.setResizable(false);
-		st.setMaximized(true);
+		//wst.setMaximized(true);
 		st.show();
 	
 	}
